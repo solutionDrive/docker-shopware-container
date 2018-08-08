@@ -1,2 +1,7 @@
 # docker-shopware-container
-Docker containers with php and defined extensions
+
+Docker container with installed shopware
+
+## License
+
+See LICENSE file
