@@ -17,3 +17,4 @@ RUN chmod +x /bin/installShopware.sh \
 COPY configureAndInitializeShopware.sh /bin/configureAndInitializeShopware.sh
 
 ENTRYPOINT ["/bin/configureAndInitializeShopware.sh", "docker-php-entrypoint"]
+CMD ["php-fpm"]
