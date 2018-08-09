@@ -2,7 +2,9 @@
 
 docker build \
     --build-arg PHP_VERSION=$PHP_VERSION \
+    --build-arg PHP_SHORT_VERSION=$PHP_SHORT_VERSION \
     --build-arg SHOPWARE_VERSION=$SHOPWARE_VERSION \
+    --build-arg SHOPWARE_SHORT_VERSION=$SHOPWARE_SHORT_VERSION \
     -t solutiondrive/docker-shopware-container:shopware$SHOPWARE_VERSION-php$PHP_VERSION \
     .
 
