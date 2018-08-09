@@ -31,8 +31,6 @@ fi
 
 CONFIG_FILE=${PROJECT_HOME}/config.php
 
-ls -ahl /var/www
-
 cd ${PROJECT_HOME}
 
 if [ -z "${FORCE_INSTALL}" ] && [ -f recovery/install/data/install.lock ]; then
