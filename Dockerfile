@@ -13,3 +13,9 @@ ADD installShopware.sh /bin/installShopware.sh
 RUN chmod +x /bin/installShopware.sh \
     && sync \
     && /bin/installShopware.sh
+
+COPY configureAndInitializeShopware.sh /bin/configureAndInitializeShopware.sh
+
+RUN ls -ahl /var/www
+
+ENTRYPOINT ["/bin/configureAndInitializeShopware.sh", "docker-php-entrypoint"]

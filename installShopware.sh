@@ -22,17 +22,11 @@ fi
 
 mkdir -p ${PROJECT_HOME}
 
-DB_HOST=mysql
-DB_PORT=3306
-DB_USERNAME=root
-DB_PASSWORD=root
-DB_DATABASE="getenv('MYSQL_DATABASE')"
-CONFIG_FILE=${PROJECT_HOME}/config.php
-
 echo "Everything is configured, starting setup:"
 echo "PHP_VERSION: ${PHP_VERSION}"
 echo "SHOPWARE_VERSION: ${SHOPWARE_VERSION}"
 echo "SHOPWARE_URL: ${SHOPWARE_URL}"
+echo "PROJECT_HOME: ${PROJECT_HOME}"
 
 cd ${PROJECT_HOME}
 
@@ -41,33 +35,5 @@ wget -q -O install.zip "${SHOPWARE_URL}"
 
 echo "Unzipping install.zip"
 unzip -q install.zip
-
-# write config
-printf '%s\n' ",s~'host' => '.*'~'host' => '${DB_HOST}'~g" w q | ed -s "${CONFIG_FILE}"
-printf '%s\n' ",s~'port' => '.*'~'port' => '${DB_PORT}'~g" w q | ed -s "${CONFIG_FILE}"
-printf '%s\n' ",s~'username' => '.*'~'username' => '${DB_USERNAME}'~g" w q | ed -s "${CONFIG_FILE}"
-printf '%s\n' ",s~'password' => '.*'~'password' => '${DB_PASSWORD}'~g" w q | ed -s "${CONFIG_FILE}"
-printf '%s\n' ",s~'dbname' => '.*'~'dbname' => ${DB_DATABASE}~g" w q | ed -s "${CONFIG_FILE}"
-
-# install shopware including database
-php recovery/install/index.php \
-    --no-interaction \
-    --quiet \
-    --no-skip-import \
-    --db-host="${DB_HOST}" \
-    --db-user="${DB_USERNAME}" \
-    --db-password="${DB_PASSWORD}" \
-    --db-name="${MYSQL_DATABASE}" \
-    --shop-locale="de_DE" \
-    --shop-host="${WEB_HOST}" \
-    --shop-path="" \
-    --shop-name="Testshop" \
-    --shop-email="sdadmin@sd.test" \
-    --shop-currency="EUR" \
-    --admin-username="sdadmin" \
-    --admin-password="sdadmin" \
-    --admin-email="sdadmin@sd.test" \
-    --admin-name="sdadmin" \
-    --admin-locale="de_DE"
 
 chown -R www-data:www-data ${PROJECT_HOME}/
