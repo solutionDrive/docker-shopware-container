@@ -35,9 +35,12 @@ echo "SHOPWARE_VERSION: ${SHOPWARE_VERSION}"
 echo "SHOPWARE_URL: ${SHOPWARE_URL}"
 
 cd ${PROJECT_HOME}
-wget -O install.zip "${SHOPWARE_URL}"
 
-unzip install.zip
+echo "Downloading shopware"
+wget -q -O install.zip "${SHOPWARE_URL}"
+
+echo "Unzipping install.zip"
+unzip -q install.zip
 
 # write config
 printf '%s\n' ",s~'host' => '.*'~'host' => '${DB_HOST}'~g" w q | ed -s "${CONFIG_FILE}"
