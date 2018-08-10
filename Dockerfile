@@ -13,3 +13,8 @@ ADD installShopware.sh /bin/installShopware.sh
 RUN chmod +x /bin/installShopware.sh \
     && sync \
     && /bin/installShopware.sh
+
+COPY configureAndInitializeShopware.sh /bin/configureAndInitializeShopware.sh
+
+ENTRYPOINT ["/bin/configureAndInitializeShopware.sh"]
+CMD ["php-fpm"]
