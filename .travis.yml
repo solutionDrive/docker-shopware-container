@@ -19,9 +19,12 @@ env:
   - LATEST=0 SHOPWARE_VERSION=5.2.27 SHOPWARE_SHORT_VERSION=52 PHP_VERSION=7.1 PHP_SHORT_VERSION=71
   - LATEST=0 SHOPWARE_VERSION=5.2.27 SHOPWARE_SHORT_VERSION=52 PHP_VERSION=7.0 PHP_SHORT_VERSION=70
 
+install:
+- gem install inspec
 
 script:
 - bash docker-build.sh
+- bash docker-test.sh
 
 # Do some informational output
 before_deploy:
