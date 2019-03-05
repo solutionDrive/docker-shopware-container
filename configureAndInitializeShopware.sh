@@ -63,7 +63,6 @@ else
         --db-name="${DB_DATABASE}" \
         --shop-locale="de_DE" \
         --shop-host="${WEB_HOST}" \
-        --shop-path="/" \
         --shop-name="Testshop" \
         --shop-email="sdadmin@sd.test" \
         --shop-currency="EUR" \
