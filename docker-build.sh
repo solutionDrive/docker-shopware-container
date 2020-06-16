@@ -10,9 +10,17 @@ docker build \
     -t solutiondrive/docker-shopware-container:shopware$SHOPWARE_VERSION-php$PHP_VERSION \
     .
 
+docker tag \
+    solutiondrive/docker-shopware-container:shopware$SHOPWARE_VERSION-php$PHP_VERSION \
+    solutiondrive/shopware:shopware$SHOPWARE_VERSION-php$PHP_VERSION
+
 # Tag "latest"
 if [ "$LATEST" = "1" ]; then
     docker tag \
         solutiondrive/docker-shopware-container:shopware$SHOPWARE_VERSION-php$PHP_VERSION \
         solutiondrive/docker-shopware-container:latest
+
+    docker tag \
+        solutiondrive/docker-shopware-container:latest \
+        solutiondrive/shopware:latest
 fi

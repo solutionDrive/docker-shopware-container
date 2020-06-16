@@ -64,12 +64,12 @@ else
         --shop-locale="de_DE" \
         --shop-host="${WEB_HOST}" \
         --shop-name="Testshop" \
-        --shop-email="sdadmin@sd.test" \
+        --shop-email="admin@example.test" \
         --shop-currency="EUR" \
-        --admin-username="sdadmin" \
-        --admin-password="sdadmin" \
-        --admin-email="sdadmin@sd.test" \
-        --admin-name="sdadmin" \
+        --admin-username="admin" \
+        --admin-password="admin" \
+        --admin-email="admin@example.test" \
+        --admin-name="admin" \
         --admin-locale="de_DE"
     RECOVERY_INSTALL_RESULT=$?
     echo "Exit code for recovery/install: ${RECOVERY_INSTALL_RESULT}"
