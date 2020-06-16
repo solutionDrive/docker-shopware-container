@@ -21,6 +21,6 @@ if [ "$LATEST" = "1" ]; then
         solutiondrive/docker-shopware-container:latest
 
     docker tag \
-        solutiondrive/docker-shopware-container:latest
+        solutiondrive/docker-shopware-container:latest \
         solutiondrive/shopware:latest
 fi
