@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 declare -A KNOWNVERSIONS=(
-    [5.5.2]=http://releases.s3.shopware.com.s3.amazonaws.com/install_5.5.2_92d78ee09d388d29f49cec3c82167ce803ee51b8.zip
+    [5.6.7]=http://releases.s3.shopware.com.s3.amazonaws.com/install_5.6.7_8cec71ed6df4804610664944e3f67e5d3a61adea.zip
+    [5.5.10]=http://releases.s3.shopware.com.s3.amazonaws.com/install_5.5.10_edfcb8e82f331fa5a0935a6c6ff35fe4348bf262.zip
     [5.4.6]=http://releases.s3.shopware.com.s3.amazonaws.com/install_5.4.6_f667f6471a77bb5af0c115f3e243594e6353747e.zip
     [5.3.7]=http://releases.s3.shopware.com.s3.amazonaws.com/install_5.3.7_741ae9fb77ecb227dc6be9c1028ded1e957c0e14.zip
     [5.2.27]=http://releases.s3.shopware.com.s3.amazonaws.com/install_5.2.27_56d5aabc56c2e48d84084d0381a72a3897d5263f.zip
