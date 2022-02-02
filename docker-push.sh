@@ -3,5 +3,4 @@
 set -e
 
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-docker push solutiondrive/docker-shopware-container
-docker push solutiondrive/shopware
+for i in `docker images --format "{{.Repository}}:{{.Tag}}" | grep "solutiondrive" | grep "shopware"`; do docker push $i; done
