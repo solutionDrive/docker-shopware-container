@@ -22,7 +22,10 @@ jobs:
                     {latest: 0, php-version: "7.2", php-short-version: "72", shopware-version: "5.5.10", shopware-short-version: "55"},
                     {latest: 0, php-version: "7.3", php-short-version: "73", shopware-version: "5.5.10", shopware-short-version: "55"},
                     {latest: 0, php-version: "7.2", php-short-version: "72", shopware-version: "5.6.7", shopware-short-version: "56"},
-                    {latest: 1, php-version: "7.3", php-short-version: "73", shopware-version: "5.6.7", shopware-short-version: "56"}
+                    {latest: 0, php-version: "7.3", php-short-version: "73", shopware-version: "5.6.7", shopware-short-version: "56"}
+                    {latest: 0, php-version: "7.4", php-short-version: "74", shopware-version: "5.7.7", shopware-short-version: "57"}
+                    {latest: 0, php-version: "8.0", php-short-version: "80", shopware-version: "5.7.7", shopware-short-version: "57"}
+                    {latest: 1, php-version: "8.1", php-short-version: "81", shopware-version: "5.7.7", shopware-short-version: "57"}
                 ]
 
 
